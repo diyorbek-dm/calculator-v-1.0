@@ -93,11 +93,26 @@ document.querySelector('.buttons').addEventListener('click', event => {
           b = ''
           sign = ''
           return
+        } else if (b === '00' || a === '00' || b === '000' || a === '000' || b === '0000' || a === '0000') {
+          output.classList.add('output-error')
+          error.classList.add('error-active')
+
+          result.textContent = '0'
+          a = ''
+          b = ''
+          sign = ''
+          return
         }
         a = (+a) / (+b)
         break;
       case '%':
         if (b === '0' || a === '0') {
+          result.textContent = '0'
+          a = ''
+          b = ''
+          sign = ''
+          return
+        } else if (b === '00' || a === '00' || b === '000' || a === '000' || b === '0000' || a === '0000') {
           result.textContent = '0'
           a = ''
           b = ''
