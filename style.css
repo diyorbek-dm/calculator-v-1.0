@@ -180,7 +180,7 @@
 
 /** Media */
 
-@media (max-width: 375px) {
+@media (min-width: 375px) {
   .wrapper {
     max-width: 335px;
     margin: 0 auto;
