@@ -94,29 +94,10 @@ document.querySelector('.buttons').addEventListener('click', event => {
           sign = ''
           return
         }
-        
-        if (b >= '00' || a >= '00') {
-          output.classList.add('output-error')
-          error.classList.add('error-active')
-
-          result.textContent = '0'
-          a = ''
-          b = ''
-          sign = ''
-          return
-        }
         a = (+a) / (+b)
         break;
       case '%':
         if (b === '0' || a === '0') {
-          result.textContent = '0'
-          a = ''
-          b = ''
-          sign = ''
-          return
-        }
-        
-        if (b >= '00' || a >= '00') {
           result.textContent = '0'
           a = ''
           b = ''
